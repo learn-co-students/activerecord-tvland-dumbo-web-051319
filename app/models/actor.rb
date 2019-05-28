@@ -9,7 +9,7 @@ class Actor < ActiveRecord::Base
     end
 
     def list_roles
-        self.characters << Character.all.select {|character| character.actor_id == self}
+        # self.characters << Character.all.select {|character| character.actor_id == self}
         self.characters.map {|character| "#{character.name} - #{character.show.name}" }
     end
 
